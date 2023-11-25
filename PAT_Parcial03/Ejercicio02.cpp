@@ -1,13 +1,15 @@
 #include "Ejercicio02.h"
 #include <unordered_map>
 #include <vector>
+using namespace std;
 
 vector<string>* Ejercicio02::findRepeatedDnaSequences(Node<char>* head)
 { 
    unordered_map<string, int> map;
 	vector<string>* result = new vector<string>();
 	Node<char>* actual = head;
-	while (actual) {
+	while (actual) 
+	{
 		Node<char>* tempo = actual;
 		string secuencia = "";
 		for (int i = 0; i < 10 && tempo; i++) {
