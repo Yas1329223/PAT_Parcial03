@@ -4,8 +4,8 @@
 
 vector<string>* Ejercicio02::findRepeatedDnaSequences(Node<char>* head)
 { 
-    std::unordered_map<std::string, int> map;
-    std::vector<std::string> result;
+    unordered_map<std::string, int> map;
+    vector<string> resultb = new vector <string>();
 
     Node<char>* actual = head;
     while (actual) 
