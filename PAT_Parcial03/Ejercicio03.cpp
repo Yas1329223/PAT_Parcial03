@@ -2,9 +2,6 @@
 
 TimeMap::TimeMap() 
 {
-	key = "";
-	value = "";
-	time = 0;
 }
 
 void TimeMap::set(string key, string value, int timestamp)
