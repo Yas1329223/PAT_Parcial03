@@ -1,10 +1,14 @@
 #pragma once
-
+#include <unordered_map>
+#include <map>
 #include <string>
 
 using std::string;
 
-class TimeMap
+class TimeMap{
+private:
+    std::unordered_map<std::string, std::map<int, std::string>> data;
+
 {
 public:
 	TimeMap();
