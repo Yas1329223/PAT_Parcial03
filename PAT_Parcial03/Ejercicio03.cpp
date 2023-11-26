@@ -1,14 +1,40 @@
 #include "Ejercicio03.h"
+#include <string>
+#include <unordered_map>
+#include <vector>
+#include <map>
 
-TimeMap::TimeMap()
-{
-}
+using namespace std;
 
-void TimeMap::set(string key, string value, int timestamp)
-{
-}
+class TimeMap {
+private:
+    unordered_map<string, map<int, string>> timeMap;
 
-string TimeMap::get(string key, int timestamp)
-{
-	return "";
-}
+public:
+    TimeMap()
+    {
+    }
+
+    void set(string key, string value, int timestamp)
+    {
+        timeMap[key][timestamp] = value;
+    }
+
+    string get(string key, int timestamp)
+    {
+        auto keyIter = timeMap.find(key);
+        if (keyIter == timeMap.end())
+        {
+            return "";
+        }
+
+        auto timestampIter = keyIter->second.lower_bound(timestamp);
+        if (timestampIter == keyIter->second.begin())
+        {
+            return "";
+        }
+
+        timestampIter--;
+        return timestampIter->second;
+    }
+};
