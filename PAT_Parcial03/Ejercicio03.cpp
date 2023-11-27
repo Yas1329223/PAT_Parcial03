@@ -19,22 +19,23 @@ string TimeMap::get(string key, int timestamp)
 
     vector<Valor>& valores = map[key];
 
-    int inicio = 0, fin = valores.size() - 1;
+    int inicio = 0, medio= 0, fin = valores.size() ;
 
-    while (inicio <= fin) {
-        int medio = inicio + (fin - inicio) / 2;
+    if (valores[inicio].timestamp > timestamp)
+        return "";
+    while (inicio < fin) 
+    {
+        medio = (fin + inicio) >> 1;
 
-        if (valores[medio].timestamp == timestamp)
-            return valores[medio].value;
-        else if (valores[medio].timestamp < timestamp)
+        if (valores [medio].timestamp == timestamp)
+            return valorws [medio].value;
+        
+        if (valores[medio].timestamp < timestamp)
             inicio = medio + 1;
         else
-            fin = medio - 1;
+            fin = medio;
+        
     }
-
-    if (fin >= 0)
-        return valores[fin].value;
-    else
-        return "";
+    return valores [medio].value;
 }
 
