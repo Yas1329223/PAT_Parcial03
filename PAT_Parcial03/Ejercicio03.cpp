@@ -35,6 +35,6 @@ string TimeMap::get(string key, int timestamp)
         else
             fin = medio;
     }
-    return valores [medio].value;
+    return valores[medio].value;
 }
 
