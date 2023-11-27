@@ -17,7 +17,7 @@ string TimeMap::get(string key, int timestamp)
   if (map.find(key) == map.end())
         return "";
 
-    const std::vector<Valor>& valores = map[key];
+    vector<Valor>& valores = map[key];
 
     int inicio = 0, fin = valores.size() - 1;
 
