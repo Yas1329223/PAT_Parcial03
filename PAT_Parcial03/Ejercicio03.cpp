@@ -1,4 +1,8 @@
 #include "Ejercicio03.h"
+#include <unordered_map>
+#include <string>
+#include <map>
+using namespace std;
 
 TimeMap::TimeMap() 
 {
