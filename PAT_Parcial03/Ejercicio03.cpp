@@ -6,11 +6,13 @@ using namespace std;
 
 TimeMap::TimeMap() 
 {
-  void TimeMap::set(std::string key, std::string value, int timestamp) {
-    map[key].push_back(Valor{timestamp, value});
+}
+void TimeMap::set(string key, string value, int timestamp)
+{
+    map[key].emplace_back(valor{ timestamp, value });
 }
 
-void TimeMap::set(string key, string value, int timestamp)
+string TimeMap::get(string key, int timestamp)
 {
   if (map.find(key) == map.end())
         return "";
