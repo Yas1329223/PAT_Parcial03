@@ -1,8 +1,8 @@
 #pragma once
 
 #include <string>
-#include <vector>
 #include <unordered_map>
+#include <map>
 
 using namespace std;
 using std::string;
@@ -13,7 +13,7 @@ private:
 	    int timestamp;
 	    string value;
 	};
-    	unordered_map<string, std::vector<Valor>> map;
+    	unordered_map<string, vector<Valor>> map;
 public:
 	TimeMap();
 
