@@ -4,16 +4,15 @@
 #include <vector>
 #include <unordered_map>
 
-struct Valor {
-    int timestamp;
-    std::string value;
-};
-
 
 class TimeMap
 {
 private:
-    std::unordered_map<std::string, std::vector<Valor>> map;
+	struct Valor {
+	    int timestamp;
+	    string value;
+	};
+    	unordered_map<string, std::vector<Valor>> map;
 public:
 	TimeMap();
 
