@@ -1,11 +1,19 @@
 #pragma once
 
 #include <string>
+#include <vector>
+#include <unordered_map>
 
-using std::string;
+struct Valor {
+    int timestamp;
+    std::string value;
+};
+
 
 class TimeMap
 {
+private:
+    std::unordered_map<std::string, std::vector<Valor>> map;
 public:
 	TimeMap();
 
