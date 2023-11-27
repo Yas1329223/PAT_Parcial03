@@ -28,13 +28,12 @@ string TimeMap::get(string key, int timestamp)
         medio = (fin + inicio) >> 1;
 
         if (valores [medio].timestamp == timestamp)
-            return valorws [medio].value;
+            return valores[medio].value;
         
         if (valores[medio].timestamp < timestamp)
             inicio = medio + 1;
         else
             fin = medio;
-        
     }
     return valores [medio].value;
 }
